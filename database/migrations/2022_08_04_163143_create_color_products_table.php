@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('color_id')->nullable()->index()->constrained('colors');
             $table->foreignId('product_id')->nullable()->index()->constrained('products');
+            $table->softDeletes();
         });
     }
 
