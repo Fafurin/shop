@@ -24,18 +24,33 @@
                 @csrf
                 <div class="form-group">
                     <input type="text" value="{{ old('name') }}" name="name" class="form-control" placeholder="Name">
+                    @error('name')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <input type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="Email">
+                    @error('email')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <input type="password" value="{{ old('password') }}" name="password" class="form-control" placeholder="Password">
+                    @error('password')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <input type="password" value="{{ old('password_confirmation') }}" name="password_confirmation" class="form-control" placeholder="Confirm password">
+                    @error('password_confirmation')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <input type="text" value="{{ old('surname') }}" name="surname" class="form-control" placeholder="Surname">
+                    @error('surname')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <input type="text" value="{{ old('patronymic') }}" name="patronymic" class="form-control" placeholder="Patronymic">
