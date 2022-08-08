@@ -19,6 +19,11 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'product_tags', 'product_id', 'tag_id');
@@ -29,10 +34,18 @@ class Product extends Model
         return $this->belongsToMany(Color::class, 'color_products', 'product_id', 'color_id');
     }
 
+
+    // для тестирования (картинки из web)
     public function getImageUrlAttribute()
     {
-        return url('storage/' . $this->preview_image);
+        return url($this->preview_image);
     }
+
+    // этот метод получает url из storage
+    // public function getImageUrlAttribute()
+    // {
+    //     return url('storage/' . $this->preview_image);
+    // }
 
 
 }

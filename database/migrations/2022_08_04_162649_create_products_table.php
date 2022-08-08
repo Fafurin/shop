@@ -22,11 +22,15 @@ return new class extends Migration
             $table->text('content');
             $table->string('preview_image');
 
+            $table->decimal('old_price');
+            $table->decimal('discount');
             $table->decimal('price');
+
             $table->integer('count');
             $table->boolean('is_published')->default(true);
 
             $table->foreignId('category_id')->index()->constrained('categories');
+            $table->foreignId('group_id')->index()->constrained('groups');
 
             $table->softDeletes();
 

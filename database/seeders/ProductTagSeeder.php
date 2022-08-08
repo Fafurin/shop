@@ -15,7 +15,7 @@ class ProductTagSeeder extends Seeder
     public function run()
     {
         ProductTag::factory()
-            ->count(40)
+            ->count(30)
             ->create();
     }
 }

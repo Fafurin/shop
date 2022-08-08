@@ -29,7 +29,8 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <input type="text" value="{{ old('number') }}" name="number" class="form-control" placeholder="Number">
+                    <input type="text" value="{{ old('number') }}" name="number" class="form-control"
+                           placeholder="Number">
                     @error('number')
                     <div class="text-danger">{{$message}}</div>
                     @enderror
@@ -49,8 +50,22 @@
                     @enderror
                 </div>
                 <div class="form-group">
+                    <input type="number" value="{{ old('old_price') }}" name="old_price" class="form-control"
+                           placeholder="Old price">
+                    @error('price')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
+                </div>
+                <div class="form-group">
                     <input type="number" value="{{ old('price') }}" name="price" class="form-control"
                            placeholder="Price">
+                    @error('price')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <input type="number" value="{{ old('discount') }}" name="discount" class="form-control"
+                           placeholder="Discount">
                     @error('price')
                     <div class="text-danger">{{$message}}</div>
                     @enderror
@@ -67,7 +82,7 @@
                     <div class="input-group">
                         <div class="custom-file">
                             <input name="preview_image" type="file" class="custom-file-input">
-                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                            <label class="custom-file-label">Choose file</label>
                         </div>
                         <div class="input-group-append">
                             <span class="input-group-text">Upload</span>
@@ -86,6 +101,18 @@
                         @endforeach
                     </select>
                     @error('category_id')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <select name="group_id" class="form-control select2" style="width: 100%;">
+                        <option selected="selected" disabled>Choose group</option>
+                        @foreach($groups as $group)
+                            <option value="{{ $group->id }}">{{ $group->title }}</option>
+                        @endforeach
+                    </select>
+                    @error('group_id')
                     <div class="text-danger">{{$message}}</div>
                     @enderror
                 </div>

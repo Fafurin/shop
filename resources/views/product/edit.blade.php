@@ -38,8 +38,16 @@
                               placeholder="Content">{{ $product->content ?? old('content') }}</textarea>
                 </div>
                 <div class="form-group">
+                    <input type="number" value="{{ $product->old_price ?? old('old_price') }}" name="old_price" class="form-control"
+                           placeholder="Old price">
+                </div>
+                <div class="form-group">
                     <input type="number" value="{{ $product->price ?? old('price') }}" name="price" class="form-control"
                            placeholder="Price">
+                </div>
+                <div class="form-group">
+                    <input type="number" value="{{ $product->discount ?? old('discount') }}" name="discount" class="form-control"
+                           placeholder="Discount">
                 </div>
                 <div class="form-group">
                     <input type="number" value="{{ $product->count ?? old('count') }}" name="count" class="form-control"
@@ -65,6 +73,18 @@
                             <option value="{{ $category->id }}"
                                 {{ $category->id == $product->category_id ? 'selected' : '' }}>
                                 {{ $category->title }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select name="group_id" class="form-control select2" style="width: 100%;">
+                        <option selected="selected" disabled>Choose group</option>
+                        @foreach($groups as $group)
+                            <option value="{{ $group->id }}"
+                                {{ $group->id == $product->group_id ? 'selected' : '' }}>
+                                {{ $group->title }}
                             </option>
                         @endforeach
                     </select>

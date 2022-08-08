@@ -33,7 +33,10 @@
                                 <th>Number</th>
                                 <th>Title</th>
                                 <th>Category</th>
+                                <th>Group</th>
+                                <th>Old price</th>
                                 <th>Price</th>
+                                <th>Discount</th>
                                 <th>Count</th>
                                 <th>Description</th>
                                 <th>Content</th>
@@ -49,8 +52,11 @@
                                     <td><a href="{{ route('product.show', $product->id) }}">{{ $product->number }}</a>
                                     <td>{{ $product->title }}</td>
                                     <td>{{ $product->category->title }}</td>
+                                    <td>{{ $product->group->title }}</td>
                                     </td>
+                                    <td>{{ $product->old_price }}</td>
                                     <td>{{ $product->price }}</td>
+                                    <td>{{ $product->discount }}</td>
                                     <td>{{ $product->count }}</td>
                                     <td>{{ $product->description }}</td>
                                     <td>{{ $product->content }}</td>

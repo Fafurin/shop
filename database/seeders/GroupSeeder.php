@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Tag;
+use App\Models\Group;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class TagSeeder extends Seeder
+class GroupSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +15,8 @@ class TagSeeder extends Seeder
      */
     public function run()
     {
-        Tag::factory()
-            ->count(20)
+        Group::factory()
+            ->count(10)
             ->create();
     }
 }

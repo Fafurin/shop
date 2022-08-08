@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Color;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,8 +19,8 @@ class ColorProductFactory extends Factory
     public function definition()
     {
         return [
-            'color_id' =>  fake()->numberBetween(1, 50),
-            'product_id' =>  fake()->numberBetween(1, 33),
+            'color_id' =>  Color::factory(),
+            'product_id' =>  Product::factory(),
         ];
     }
 }

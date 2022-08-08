@@ -49,12 +49,24 @@
                                 <td>{{ $product->category->title }}</td>
                             </tr>
                             <tr>
+                                <td>Group</td>
+                                <td>{{ $product->group->title }}</td>
+                            </tr>
+                            <tr>
                                 <td>Number</td>
                                 <td>{{ $product->number }}</td>
                             </tr>
                             <tr>
+                                <td>Old price</td>
+                                <td>{{ $product->old_price }}</td>
+                            </tr>
+                            <tr>
                                 <td>Price</td>
                                 <td>{{ $product->price }}</td>
+                            </tr>
+                            <tr>
+                                <td>Discount</td>
+                                <td>{{ $product->discount }}</td>
                             </tr>
                             <tr>
                                 <td>Count</td>
