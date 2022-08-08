@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\Group;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -30,6 +31,7 @@ class ProductFactory extends Factory
             'count' => fake()->numberBetween(0, 100),
             'is_published' => fake()->boolean(),
             'category_id' => Category::factory(),
+            'group_id' => Group::factory(),
         ];
     }
 }
