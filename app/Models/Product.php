@@ -34,6 +34,11 @@ class Product extends Model
         return $this->belongsToMany(Color::class, 'color_products', 'product_id', 'color_id');
     }
 
+    public function productImages()
+    {
+        return $this->hasMany(ProductImage::class, 'product_id', 'id');
+    }
+
 
     // для тестирования (картинки из web)
     public function getImageUrlAttribute()

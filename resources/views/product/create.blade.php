@@ -94,6 +94,51 @@
                 </div>
 
                 <div class="form-group">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input name="product_images[]" type="file" class="custom-file-input">
+                            <label class="custom-file-label">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                    </div>
+                    @error('preview_image')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input name="product_images[]" type="file" class="custom-file-input">
+                            <label class="custom-file-label">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                    </div>
+                    @error('preview_image')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input name="product_images[]" type="file" class="custom-file-input">
+                            <label class="custom-file-label">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                    </div>
+                    @error('preview_image')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
                     <select name="category_id" class="form-control select2" style="width: 100%;">
                         <option selected="selected" disabled>Choose category</option>
                         @foreach($categories as $category)
