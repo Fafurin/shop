@@ -22,13 +22,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Category::factory()->create();
-        Group::factory()->create();
-        Color::factory()->create();
-        Tag::factory()->create();
-        Product::factory()->create();
-        ColorProduct::factory()->create();
-        ProductTag::factory()->create();
-        ProductImage::factory()->create();
+//        Category::factory(10)->create();
+//        Group::factory(10)->create();
+//        Color::factory(30)->create();
+//        Tag::factory()->create();
+//        Product::factory(12)->create();
+//        ColorProduct::factory()->create();
+//        ProductTag::factory()->create();
+        ProductImage::factory(30)->create();
     }
 }

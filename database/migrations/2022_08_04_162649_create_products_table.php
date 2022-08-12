@@ -22,9 +22,9 @@ return new class extends Migration
             $table->text('content');
             $table->string('preview_image');
 
-            $table->decimal('old_price');
+            $table->integer('old_price');
             $table->decimal('discount');
-            $table->decimal('price');
+            $table->integer('price');
 
             $table->integer('count');
             $table->boolean('is_published')->default(true);

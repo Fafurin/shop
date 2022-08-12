@@ -44,9 +44,9 @@ class StoreController extends Controller
 
             if (isset($product_images)) {
                 foreach ($product_images as $image) {
-                    $currentImages = ProductImage::where('product_id', $product->id)->get();
+                    $currentImagesCount = ProductImage::where('product_id', $product->id)->count();
 
-                    if (count($currentImages) > 3) continue;
+                    if ($currentImagesCount > 3) continue;
                     $file_path = Storage::disk('public')->put('/images', $image);
                     ProductImage::create([
                         'file_path' => $file_path,
